@@ -2,7 +2,15 @@ from web3 import Web3
 import json
 import numpy as np
 
-INFURA_API_KEY = ''
+import os
+from dotenv import load_dotenv
+
+# Load the .env file
+load_dotenv()
+
+# Access the INFURA_API_KEY environment variable
+INFURA_API_KEY = os.getenv('INFURA_API_KEY')
+
 w3 = Web3(Web3.HTTPProvider(f'https://mainnet.infura.io/v3/{INFURA_API_KEY}'))
 
 # Load Uniswap V3 Pool ABI
