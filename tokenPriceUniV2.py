@@ -314,6 +314,9 @@ def create_price_dataframe_v2(start_block, end_block, target_pair_address, stabl
     
     # Set the block_number column as the index of the DataFrame
     df.set_index('block_number', inplace=True)
+
+    # Save the DataFrame to a CSV file
+    df.to_csv('your_file.csv', index=True)
     
     return df
 
