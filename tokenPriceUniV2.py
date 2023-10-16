@@ -148,9 +148,9 @@ def create_price_dataframe_stable_v2(start_block, end_block, target_pair_address
         
         # Assuming the base token in both stablecoin pairs is the same (e.g., ETH)
         # Calculate and store the price in USD
-        data['coin0_price_in_coin1'] = 1
+        data['coin0_price_in_coin1'] = 1.0
         data['coin1_price_in_coin0'] = price_coin1_in_coin0
-        data['coin0_price_in_usd'] = 1
+        data['coin0_price_in_usd'] = 1.0
         data['coin1_price_in_usd'] = price_coin1_in_coin0
         
         # Append the data to the DataFrame
